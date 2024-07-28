@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About This App</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>This is a simple Ionic application built with Angular. It demonstrates basic navigation and form handling.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="name">
+    <ion-card-header>
+      <ion-card-title>User Name</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ name }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
