@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  private name: string = '';
+  private formData: any = {};
 
   constructor() { }
 
-  setName(name: string) {
-    this.name = name;
+  setFormData(data: any) {
+    this.formData = data;
   }
 
-  getName(): string {
-    return this.name;
+  getFormData(): any {
+    return this.formData;
   }
 }

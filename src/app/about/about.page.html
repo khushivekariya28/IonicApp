@@ -13,12 +13,15 @@
       <p>This is a simple Ionic application built with Angular. It demonstrates basic navigation and form handling.</p>
     </ion-card-content>
   </ion-card>
-  <ion-card *ngIf="name">
+  <ion-card *ngIf="formData.name">
     <ion-card-header>
-      <ion-card-title>User Name</ion-card-title>
+      <ion-card-title>User Data</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>{{ name }}</p>
+      <p><strong>Name:</strong> {{ formData.name }}</p>
+      <p><strong>Email:</strong> {{ formData.email }}</p>
+      <p><strong>Phone Number:</strong> {{ formData.phone }}</p>
+      <p><strong>Message:</strong> {{ formData.message }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

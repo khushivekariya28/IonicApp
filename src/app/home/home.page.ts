@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,11 +9,14 @@ import { DataService } from '../data.service';
 })
 export class HomePage {
   name: string = '';
+  email: string = '';
+  phone: string = '';
+  message: string = '';
 
   constructor(private dataService: DataService) {}
 
-  onSubmit() {
-    this.dataService.setName(this.name);
-    console.log('Form Submitted:', this.name);
+  onSubmit(form: NgForm) {
+    this.dataService.setFormData(form.value);
+    console.log('Form Submitted:', form.value);
   }
 }

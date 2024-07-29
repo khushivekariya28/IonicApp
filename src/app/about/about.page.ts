@@ -7,11 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
-  name: string = '';
+  formData: any = {};
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.name = this.dataService.getName();
+    this.formData = this.dataService.getFormData();
   }
 }

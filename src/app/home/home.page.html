@@ -5,14 +5,23 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="onSubmit()" #form="ngForm">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <ion-item>
       <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" required name="name" ngModel #nameInput="ngModel"></ion-input>
+      <ion-input type="text" required name="name" ngModel></ion-input>
     </ion-item>
-    <ion-note *ngIf="nameInput.invalid && nameInput.touched" color="danger">
-      Name is required.
-    </ion-note>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required name="email" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input type="tel" required name="phone" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea required name="message" ngModel></ion-textarea>
+    </ion-item>
     <ion-button expand="full" type="submit" [disabled]="!form.valid">Submit</ion-button>
   </form>
   <ion-button expand="full" color="secondary" routerLink="/about">Go to About Page</ion-button>
